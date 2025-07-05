@@ -1,0 +1,45 @@
+# Node
+node_modules/
+
+# Vite
+/dist
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Env files
+.env
+.env.*
+
+# VS Code
+.vscode/
+
+# Mac
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# Optional: local dev artifacts
+*.local
+
+# Coverage
+coverage/
+
+# Build output
+build/
+
+# Misc
+*.log
+*.tmp
+
+# System files
+*.swp
+*.swo
+
+# Svelte/Vite cache
+.svelte-kit/
+.cache/

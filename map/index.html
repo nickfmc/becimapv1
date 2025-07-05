@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BECI - Basin-scale Events and Coastal Impacts</title>
+    <meta name="description" content="Interactive web map showing oceanographic and salmon data across the North Pacific">
+    
+    <!-- MapLibre GL CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.0.0/dist/maplibre-gl.css">
+    
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="./src/styles/main.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/vite.svg">
+</head>
+<body>
+    <div id="app">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1 class="logo">BECI</h1>
+                <p class="subtitle">Basin-scale Events and Coastal Impacts</p>
+            </div>
+        </header>
+
+        <!-- Main content -->
+        <main class="main-content">
+            <!-- Map container -->
+            <div id="map" class="map-container"></div>
+            
+            <!-- Controls sidebar -->
+            <div class="controls-sidebar">
+                <div class="controls-content">
+                    <h3>Data Layers</h3>
+                    
+                    <div class="layer-group">
+                        <h4>Salmon Data</h4>
+                        <div class="layer-control">
+                            <label class="switch">
+                                <input type="checkbox" id="salmon-populations" checked>
+                                <span class="slider"></span>
+                            </label>
+                            <span class="layer-label">Population Densities</span>
+                        </div>
+                        <div class="layer-control">
+                            <label class="switch">
+                                <input type="checkbox" id="migration-corridors" checked>
+                                <span class="slider"></span>
+                            </label>
+                            <span class="layer-label">Migration Corridors</span>
+                        </div>
+                    </div>
+                    
+                    <div class="layer-group">
+                        <h4>Ocean Data</h4>
+                        <div class="layer-control">
+                            <label class="switch">
+                                <input type="checkbox" id="temperature-anomalies" checked>
+                                <span class="slider"></span>
+                            </label>
+                            <span class="layer-label">Temperature Anomalies</span>
+                        </div>
+                        <div class="layer-control">
+                            <label class="switch">
+                                <input type="checkbox" id="monitoring-stations">
+                                <span class="slider"></span>
+                            </label>
+                            <span class="layer-label">Monitoring Stations</span>
+                        </div>
+                    </div>
+                    
+                    <div class="legend">
+                        <h4>Legend</h4>
+                        <div class="legend-item">
+                            <div class="legend-color" style="background-color: #ff6b6b;"></div>
+                            <span>High Salmon Density</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color" style="background-color: #4ecdc4;"></div>
+                            <span>Migration Routes</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color" style="background-color: #45b7d1;"></div>
+                            <span>Temperature Anomalies</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color" style="background-color: #f39c12;"></div>
+                            <span>Monitoring Stations</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Loading indicator -->
+        <div id="loading" class="loading">
+            <div class="spinner"></div>
+            <p>Loading BECI Map...</p>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script type="module" src="/src/main.js"></script>
+</body>
+</html>
